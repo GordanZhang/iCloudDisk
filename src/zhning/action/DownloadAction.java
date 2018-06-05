@@ -57,7 +57,7 @@ public class DownloadAction extends ActionSupport implements Serializable{
 			    ServletActionContext.getRequest().setAttribute("message", "对不起，您要下载的资源已被删除");
 			    return INPUT;
 			}
-			path = "D:"+File.separator+"upload"+File.separator+path;
+			path = "C:"+File.separator+"upload"+File.separator+path;
 	
 		    File file = new File(path+File.separator+filename);
 			//通知浏览器以下载方式打开

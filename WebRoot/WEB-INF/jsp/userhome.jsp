@@ -60,8 +60,8 @@
    <div style="font-size: 30px ; color: yellow ; font-style: italic;"><font> In iCloud</font></div>
    
    <br/>
-    <table class="table" frame="border" width="100%" align="center">
-    <thead class="thead-dark">
+    <table class="table table-hover table-borderless" frame="border" width="100%" align="center">
+    <thead class="thead bg-success">
     	<tr >
     	    <th scope="col">文件名</th>
       <th scope="col">文件大小</th>
@@ -74,7 +74,7 @@
     	<tr>
     	<tbody>
     	<c:forEach var="c" items="${requestScope.pagebean.list}" varStatus="stat">
-    		<tr >
+    		<tr class="table-info" >
 	    		<td>${c.filename }</td>
 	    		<td>${c.filesize } kb</td>
 	    		<td>${c.createtime }</td>
@@ -83,7 +83,7 @@
 	    		</td>
 	    		<td>
 	    		<form>
-	    		      <select  id="${c.id}" onchange="gochange(${pagebean.currentpage},${c.id})" >
+	    		      <select class="custom-select" id="${c.id}" onchange="gochange(${pagebean.currentpage},${c.id})" >
 	    		         <c:if test="${c.canshare==0 }">
     					         <option value="0">私有</option> 
     					         <option value="1" >共享</option> 
@@ -98,7 +98,7 @@
 	    		<td>
                   <a class="btn btn-danger" href="javascript:void(0)" onclick="godelete(${pagebean.currentpage},${c.id})">删除文件</a>
 	    		</td>
-    		<tr>
+    		</tr>
     	</c:forEach>
     	</tbody>
     	

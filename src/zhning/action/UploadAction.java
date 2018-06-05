@@ -23,7 +23,7 @@ public class UploadAction extends ActionSupport implements Serializable{
 	private String fileFileName;//   上传输入域+FileName  文件名  JavaWeb.pdf
 	private String fileContentType;// 上传文件的MIME类型  application/pdf
 
-	private static final String storePath = "D:"+File.separator+"upload"; //存储目录 D:\\upload
+	private static final String storePath = "C:"+File.separator+"upload"; //存储目录 C:\\upload
 	private static final int normallimit = 20*1000*1000; //普通用户上传单个文件的最大体积 20mb
 	private static final int viplimit = 50*1000*1000; //普通用户上传单个文件的最大体积 50mb
 	private static final int factor = 1000000;  //Mb到字节的转换因子
